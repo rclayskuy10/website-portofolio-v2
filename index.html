@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* Elegant dark gradient */
+        color: #e0e0e0; /* Light text for contrast */
+      }
+      .navbar {
+        background: linear-gradient(to right, #141e30, #243b55); /* Elegant navbar gradient */
+      }
+      .nav-link {
+        transition: color 0.3s ease;
+      }
+      .nav-link:hover {
+        color: #f0a500; /* Gold color on hover */
+      }
+      .active {
+        background-color: #243b55; /* Active background */
+        color: #f0a500; /* Gold text color */
+        padding: 5px 10px;
+        border-radius: 10px; /* Rounded corners for luxury feel */
+      }
+      button {
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        background: linear-gradient(to right, #0f2027, #f0a500); /* Elegant button gradient */
+        color: white;
+      }
+      button:hover {
+        background: linear-gradient(to right, #f0a500, #0f2027); /* Reverse gradient on hover */
+        transform: scale(1.05); /* Slight scale effect */
+      }
+      section {
+        padding: 6rem 1rem; /* Increased padding for sections */
+      }
+      .container {
+        max-width: 1200px; /* Maximum width for container */
+      }
+    </style>
+  </head>
+  <body class="h-screen text-gray-800">
+    <!-- Navbar start -->
+    <nav class="py-4 px-7 fixed w-full top-0 z-50 navbar shadow-lg">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-3xl font-bold text-white" style="font-family: 'Times New Roman', serif;">My Portfolio</div>
+        <button id="menu-toggle" class="block lg:hidden text-white">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul id="navbar" class="hidden lg:flex space-x-6 font-medium text-white" style="font-family: 'Times New Roman', serif;">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#certificate" class="nav-link">Certificate</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#project" class="nav-link">Project</a></li>
+        </ul>        
+      <div class="hidden lg:block">
+        <a href="https://drive.google.com/file/d/1cZW3OFocx2doynQBnB7-sTdGl92k5ZEQ/view?usp=drive_link">
+    <button class="border p-3 rounded-full text-white font-semibold shadow-2xl hover:shadow-none transition-all duration-300 ease-in-out transform hover:scale-105">
+      Download CV
+    </button>
+        </a>
+</div>
+
+<!-- Mobile Menu -->
+<ul id="mobile-menu" class="hidden bg-gradient-to-r from-gray-800 to-gray-900 text-white space-y-2 p-4 lg:hidden font-medium" style="font-family: 'Times New Roman', serif;">
+  <li><a href="#home" class="nav-link block hover:text-yellow-500">Home</a></li>
+  <li><a href="#about" class="nav-link block hover:text-yellow-500">About Me</a></li>
+  <li><a href="#certificate" class="nav-link block hover:text-yellow-500">Certificate</a></li>
+  <li><a href="#skills" class="nav-link block hover:text-yellow-500">Skills</a></li>
+  <li><a href="#project" class="nav-link block hover:text-yellow-500">Project</a></li>
+</ul>
+</nav>
+
+<main class="px-1 lg:px-10">
+  <!-- Home Section -->
+  <section id="home" class="mx-auto py-10 lg:py-20 px-4 mt-16 bg-white rounded-lg shadow-lg" style="font-family: 'Times New Roman', serif;">
+    <div class="lg:flex lg:flex-row-reverse lg:justify-center lg:items-center md:block">
+      <div class="lg:w-2/5 flex justify-center mb-4 md:mb-8" data-aos="fade-left" data-aos-duration="2000">
+        <img src="img/Profiles.jpg" alt="Profile Image" class="object-cover rounded-full border-4 border-yellow-500 w-96 shadow-lg" />
+      </div>
+      <div class="lg:w-3/5" data-aos="fade-right" data-aos-duration="2000">
+        <h3 class="text-2xl lg:text-4xl font-semibold">Hello I'm</h3>
+        <h1 class="text-3xl lg:text-5xl font-bold text-yellow-500">Riski Pratama</h1>
+        <h3 class="text-xl lg:text-3xl font-semibold">And I'm <span class="text-yellow-500" id="text"></span></h3>
+        <p class="text-base lg:text-lg mt-4 leading-relaxed">
+          Bachelor of Science - BS Computer Science graduate from Universitas Dinamika Bangsa Jambi class of 2021 and MBKM student of MSIB program class 6 IBM Academy Independent Study: Advance AI x class 7 IBM Academy: Hybrid Cloud & Red Hat at PT Kinema Systrans Multimedia (Infinite Learning Indonesia).
+        </p>
+            <div class="flex w-44 py-4 justify-between">
+              <a href="https://www.linkedin.com/in/riski-pratama-686104253" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 hover:border-yellow-500 hover:text-yellow-500 transition-colors duration-300 ease-in-out shadow-lg hover:shadow-yellow-500/50">
+                <i class="fab fa-linkedin fa-xl"></i>
+              </a>
+              <a href="https://www.instagram.com/riskipratama.10" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 hover:border-yellow-500 hover:text-yellow-500 transition-colors duration-300 ease-in-out shadow-lg hover:shadow-yellow-500/50">
+                <i class="fab fa-instagram fa-xl"></i>
+              </a>
+              <a href="https://github.com/rclayskuy10" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 hover:border-yellow-500 hover:text-yellow-500 transition-colors duration-300 ease-in-out shadow-lg hover:shadow-yellow-500/50">
+                <i class="fab fa-github fa-xl"></i>
+              </a>
+              <a href="https://www.youtube.com/@rclayskuy" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 hover:border-yellow-500 hover:text-yellow-500 transition-colors duration-300 ease-in-out shadow-lg hover:shadow-yellow-500/50">
+                <i class="fab fa-youtube fa-xl"></i>
+              </a>
+            </div>                  
+          </div>                      
+          <a href="https://drive.google.com/file/d/1cZW3OFocx2doynQBnB7-sTdGl92k5ZEQ/view?usp=drive_link">
+            <button class="border p-3 rounded-lg bg-yellow-500 text-white block lg:hidden shadow-lg hover:bg-green-800 transition duration-300 ease-in-out">Download CV</button>
+          </a>
+        </div>
+      </section>
+    
+<!-- About Me Section -->
+<section id="about" class="py-10 lg:py-20 px-4 bg-white rounded-lg shadow-lg" style="font-family: 'Times New Roman', serif;">
+  <div class="lg:flex lg:justify-center lg:items-center md:block">
+    <div class="w-2/5 lg:block hidden" data-aos="fade-right" data-aos-duration="2000">
+      <img src="img/Profile 2.jpg" alt="" class="object-cover rounded-full border-4 border-yellow-500 w-96 shadow-lg" />
+    </div>
+    <div class="w-full lg:w-3/5" data-aos="fade-left" data-aos-duration="2000">
+      <h2 class="text-3xl font-bold mb-4 text-center lg:text-left text-yellow-500">About <span class="text-yellow-500">Me</span></h2>
+      <h3 class="text-xl lg:text-3xl font-semibold">Machine Learning Engineer | IT Support | Junior System Administrator | Cyber Security Enthusiast | Data Science Enthusiast | Robotics Enthusiast</h3>
+      <p class="text-base lg:text-lg mt-2 leading-relaxed">
+        Having sufficient experience in the field of information technology (IT), mastering several programming languages such as Python, C++, C#, HTML5, CSS3, JavaScript, and having a deep understanding of basic IT concepts. Having good problem-solving and design thinking skills and a great desire to continue learning, ready to face challenges in various fields such as Sys Admin, Machine Learning, Artificial Intelligence (AI), Cyber Security, Data Science, IT Support, Robotics, and other technologies. I live in Jambi City.
+      </p>
+    </div>
+  </div>
+</section>
+
+      <!-- About Me Section end -->
+
+      <!-- Certificate Section -->
+<section id="certificate" class="py-10 lg:py-16 bg-gradient-to-r from-gray-100 to-gray-200">
+  <div class="mx-auto lg:p-8 max-w-7xl">
+    <h2 class="text-4xl text-center font-bold text-gray-800 mb-8" style="font-family: 'Times New Roman', serif;">
+      My <span class="text-yellow-500">Certificates</span> <span class="text-gray-800">intermediate to advanced</span>
+    </h2>    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-7 lg:px-0" data-aos="fade-up" data-aos-duration="2000">
+      <!-- Sertifikat 1 -->
+      <a href="https://drive.google.com/file/d/1xqfF_m1q0Pe47Hs754GYCBYg7YqQPeGP/view?usp=drive_link" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif1.png" alt="Certificate 1" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 2 -->
+      <a href="https://digitalent.kominfo.go.id/cek-sertifikat?registrasi=1957832840-1991" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif2.png" alt="Certificate 2" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 3 -->
+      <a href="https://drive.google.com/file/d/1ckTQdawCYdk4rDArrZtA02rQYI92zU-_/view?usp=sharing" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif3.png" alt="Certificate 3" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 4 -->
+      <a href="https://www.credly.com/badges/f8a2b49e-3277-46b0-b42f-1c0fb96e4a57/linked_in_profile" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif4.png" alt="Certificate 4" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 5 -->
+      <a href="https://www.credly.com/earner/earned/badge/b5285939-0afc-4b76-88d9-43b12434ce14" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif5.png" alt="Certificate 5" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 6 -->
+      <a href="https://drive.google.com/file/d/1Fp7ArcCUpPsX3X5Pl35G9TwArVbB7Pi1/view?usp=drive_link" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif6.png" alt="Certificate 6" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 7 -->
+      <a href="https://www.credly.com/earner/earned/badge/3e1542c4-8cb2-40b6-a3b1-78045206de25" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif7.png" alt="Certificate 6" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 8 -->
+      <a href="https://www.credly.com/earner/earned/badge/9d474f74-8bca-4176-b167-6fee67fb34a0" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif8.png" alt="Certificate 6" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 9 -->
+      <a href="https://www.credly.com/earner/earned/badge/061d6b01-8e10-4c24-b8d9-4efd27ab64dd" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif9.png" alt="Certificate 6" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 10 -->
+      <a href="https://www.credly.com/earner/earned/badge/2c579b69-2033-4f6a-b4bc-4818781cf43d" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif10.png" alt="Certificate 6" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 11 -->
+      <a href="https://www.credly.com/earner/earned/badge/6a602c9c-f181-4acd-a2f2-eade9f706ff0" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif11.png" alt="Certificate 6" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 12 -->
+      <a href="https://www.credly.com/badges/ab8c4b80-0aaf-4258-817c-ced3d22a1e96/public_url" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif12.png" alt="Certificate 6" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 13 -->
+      <a href="https://drive.google.com/file/d/1-3C1jLLrKfRqpxth0u_XYLGOi5CJnSAR/view?usp=drive_link" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif13.png" alt="Certificate 6" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+      <!-- Sertifikat 14 -->
+      <a href="https://www.credly.com/badges/894b3914-8a87-43ab-a597-d9f4e4ed5721/public_url" target="_blank" class="shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+        <img src="img/sertif14.png" alt="Certificate 6" class="w-full rounded-lg border-2 border-gray-300" />
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Certificate Section end -->
+<!-- Skills Section -->
+<section id="skills" class="mx-auto p-10 bg-gradient-to-b from-gray-50 to-gray-100">
+  <h2 class="text-4xl text-center font-extrabold text-gray-800 mb-8" style="font-family: 'Times New Roman', serif;">
+    My <span class="text-yellow-500">Skills</span> <span class="text-gray-800">and Framework</span>
+  </h2>  
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 px-4 lg:px-0" data-aos="fade-up" data-aos-duration="2000">
+    <div class="flex justify-center">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.laYIzRY2A-jpnBA2rO2jSQAAAA&pid=Api&P=0&h=180" alt="Google Colab" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://logodix.com/logo/92148.png" alt="IBM Cloud" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://1000logos.net/wp-content/uploads/2021/04/Red-Hat-logo.png" alt="Red Hat" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://seeklogo.com/images/A/arduino-ide-logo-8C562047FD-seeklogo.com.png" alt="Arduino IDE" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://logodix.com/logo/719944.png" alt="Visual Studio Code" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://logowik.com/content/uploads/images/tensorflow-new1255.jpg" alt="TensorFlow" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://freelogopng.com/images/all_img/1656733637logo-canva-png.png" alt="Canva" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://www.pngitem.com/pimgs/m/403-4039114_c-logo-svg-hd-png-download.png" alt="C++" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://logodownload.org/wp-content/uploads/2016/10/html5-logo-2.png" alt="HTML5" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://logodownload.org/wp-content/uploads/2017/04/css-3-logo.png" alt="CSS3" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+    <div class="flex justify-center">
+      <img src="https://i.pinimg.com/originals/98/0b/a0/980ba07956ccfdf81b5060b1795cdcad.png" alt="JavaScript" class="w-full max-w-[120px] rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-110" />
+    </div>
+  </div>
+</section>
+<!-- Skills Section end -->
+
+ <!-- Projects Section -->
+<section id="project" class="py-8 bg-gray-100">
+  <div class="container mx-auto px-8">
+    <h2 class="text-3xl font-bold text-center" style="font-family: 'Times New Roman', serif;">
+      My <span class="text-yellow-500">Project</span>
+    </h2>    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="2000">
+
+<!-- Project Card 1 -->
+<div class="bg-white shadow-lg rounded-md overflow-hidden border border-yellow-500">
+  <img src="img/Reliji Trash Care.png" alt="Project Image" class="w-full h-44 object-cover" />
+  <div class="p-6 bg-yellow-500 text-white" style="font-family: 'Times New Roman', serif;">
+    <h3 class="text-xl font-semibold mb-4">Reliji Trash Care Website</h3>
+    <p class="text-sm mb-6">This is my Capstone Project assignment with the title Reliji Trash Care Website in independent study batch 6 IBM Academy: Advance AI Infinite Learning Indonesia which aims to improve skills in the field of creating AI models and teamwork through Design Thinking, Deep Learning with CNN models, and Reports End of Project.</p>
+    <a href="https://github.com/Reliji-Trash-Care" class="bg-white text-yellow-500 py-2 px-4 rounded-md font-semibold">Read More</a>
+  </div>
+</div>
+
+<!-- Project Card 2 -->
+<div class="bg-white shadow-lg rounded-md overflow-hidden border border-yellow-500">
+  <img src="img/webteam.png" alt="Project Image" class="w-full h-44 object-cover" />
+  <div class="p-6 bg-yellow-500 text-white" style="font-family: 'Times New Roman', serif;">
+    <h3 class="text-xl font-semibold mb-4">Project Group Website</h3>
+    <p class="text-sm mb-6">This website is a team introduction website or team portfolio that is created to provide information on the progress and achievements of a modern team because it is easier to access online.</p>
+    <a href="https://github.com/rclayskuy10/Website-kelompok-HCRH" class="bg-white text-yellow-500 py-2 px-4 rounded-md font-semibold">Read More</a>
+  </div>
+</div>
+
+<!-- Project Card 3 -->
+<div class="bg-white shadow-lg rounded-md overflow-hidden border border-yellow-500">
+  <img src="img/IOT.jpg" alt="Project Image" class="w-full h-44 object-cover" />
+  <div class="p-6 bg-yellow-500 text-white" style="font-family: 'Times New Roman', serif;">
+    <h3 class="text-xl font-semibold mb-4">Smart Home IOT with NodeMCU & Blynk</h3>
+    <p class="text-sm mb-6">This project involves creating a smart home system using the NodeMCU microcontroller, the Blynk app, and two relay modules. It enables remote control of home appliances via a mobile application, enhancing convenience and automation.</p>
+    <a href="https://youtu.be/Pm9_Bd3NkcI?si=e-_QJl3W6u6COhEV" class="bg-white text-yellow-500 py-2 px-4 rounded-md font-semibold">Read More</a>
+  </div>
+</div>
+
+<!-- Project Card 4 -->
+<div class="bg-white shadow-lg rounded-md overflow-hidden border border-yellow-500">
+  <img src="img/claybot.png" alt="Project Image" class="w-full h-44 object-cover" />
+  <div class="p-6 bg-yellow-500 text-white" style="font-family: 'Times New Roman', serif;">
+    <h3 class="text-xl font-semibold mb-4">Clay Bot (Worker & Moving Robot)</h3>
+    <p class="text-sm mb-6">Clay Bot is a robotic system designed to assist or replace human tasks in handling hazardous items like explosives. Its primary function is to enhance safety by minimizing human exposure to risks during transport and management of these items.</p>
+    <a href="https://youtu.be/84uet8Sl5IA?si=Bjo6PhQx0aHcE3ip" class="bg-white text-yellow-500 py-2 px-4 rounded-md font-semibold">Read More</a>
+  </div>
+</div>
+
+<!-- Project Card 5 -->
+<div class="bg-white shadow-lg rounded-md overflow-hidden border border-yellow-500">
+  <img src="img/modernisasi.png" alt="Project Image" class="w-full h-44 object-cover" />
+  <div class="p-6 bg-yellow-500 text-white" style="font-family: 'Times New Roman', serif;">
+    <h3 class="text-xl font-semibold mb-4">Modernization Web Application to Red Hat OpenShift Container Platform</h3>
+    <p class="text-sm mb-6">This project is an application modernization to a cloud-native architecture using Red Hat OpenShift Container Platform. The goal is to package applications into containers, automate CI/CD pipelines, and deploy with rolling updates without downtime. This project leverages tools such as Podman for containerization, GitHub Actions for CI/CD, and Red Hat Quay.io as a container registry, making applications more scalable, flexible, and manageable in the cloud environment.</p>
+    <a href="https://github.com/Project-Capstone-Risabafatir" class="bg-white text-yellow-500 py-2 px-4 rounded-md font-semibold">Read More</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-yellow-500 to-gray-800 text-white py-4 text-center">
+      <p class="mb-0">&copy; 2025 <strong>Riski Pratama Portfolio</strong>. All rights reserved.</p>
+  </footer>  
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
